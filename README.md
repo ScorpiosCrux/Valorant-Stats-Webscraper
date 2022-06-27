@@ -1,6 +1,7 @@
 # Valorant Stats Webscraper
 
 - This code uses `tracker.gg` to obtain information.
+- This means that you have to have signed in on tracker.gg in order for the program to work.
 
 
 ## Setting up Python Virtual Environment
