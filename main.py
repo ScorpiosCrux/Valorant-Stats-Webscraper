@@ -16,7 +16,10 @@ driver = webdriver.Chrome()
 #https://www.w3schools.com/tags/ref_urlencode.asp 
 usernames = [
     'VividEradicator%23NA1',
-    'anotherUsername%23numbers',
+    'HowlForDaddy%23AWOO',
+    'CODPLAYER%23AK47',
+    '420Wolfy%235729',
+    'Viv%233251',
 ]
 
 #URLS for each game type
@@ -54,7 +57,7 @@ def parsePlayTime(elems):
         try:
             playTimeRaw = elems.get(gameType)
             playTimeSplit = playTimeRaw.split('h')  #split on h 
-            totalHours += int(playTimeSplit[0])     #grab first element
+            totalHours += int(playTimeSplit[0].replace(',', ''))     #grab first element
         except:
             print("error parsing. Play time data: " + elems.get(gameType))      #if you have played less than an hour, we don't add
     return totalHours
@@ -64,8 +67,11 @@ def parsePlayTime(elems):
 totalHoursPlayed = 0
 for username in usernames:
     elems = getPlayTime(username)
-    totalHoursPlayed += parsePlayTime(elems)
-    print(username + " Total Hours Played: " + str(totalHoursPlayed) + " hours.")
+    print(username + " elems" + str(elems) + " hours.")
+    playTime = parsePlayTime(elems)
+    totalHoursPlayed += playTime
+    print(username + "'s playtime: " + str(playTime))
+    print("Absolute Total Hours Played: " + str(totalHoursPlayed) + " hours. \n\n\n")
 
 print("Done!")
 driver.close() # Closes the window

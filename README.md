@@ -27,4 +27,4 @@ replace *valorant-stats-webscraper* with what you had in step 1.
 - `brew install cask chromedriver` is the command on **MacOS**
 
 ## Known Issues:
-* With Chrome v103 there an error when running with VSCode debugger. Try running without break points.
+* With Chrome v103 there an error when running with VSCode debugger. Try running without break points. Re-running the program works!
