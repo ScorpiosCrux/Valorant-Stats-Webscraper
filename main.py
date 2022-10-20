@@ -15,11 +15,9 @@ driver = webdriver.Chrome()
 #CONVERT USERNAMES TO HTML ENCODED. This means # are converted to %23.
 #https://www.w3schools.com/tags/ref_urlencode.asp 
 usernames = [
-    'VividEradicator%23NA1',
-    'HowlForDaddy%23AWOO',
-    'CODPLAYER%23AK47',
-    '420Wolfy%235729',
-    'Viv%233251',
+    'username1%23TAG',
+    'username2%23TAG',
+    'username3%23TAG',
 ]
 
 #URLS for each game type
@@ -70,8 +68,8 @@ for username in usernames:
     print(username + " elems" + str(elems) + " hours.")
     playTime = parsePlayTime(elems)
     totalHoursPlayed += playTime
-    print(username + "'s playtime: " + str(playTime))
-    print("Absolute Total Hours Played: " + str(totalHoursPlayed) + " hours. \n\n\n")
+    print(username + "'s playtime: " + str(playTime) + "hours.")
+print("\nAbsolute Total Hours Played: " + str(totalHoursPlayed) + " hours. \n\n\n")
 
 print("Done!")
 driver.close() # Closes the window
